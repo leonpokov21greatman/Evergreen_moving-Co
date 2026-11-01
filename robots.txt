@@ -1,0 +1,5 @@
+# Lets every search engine read the whole site.
+User-agent: *
+Allow: /
+
+Sitemap: https://leonpokov21greatman.github.io/Evergreen_moving-Co/sitemap.xml
