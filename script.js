@@ -155,5 +155,15 @@ if (form) {
   });
 }
 
-// 4. Keep the copyright year up to date.
+// 4. If a link points at one FAQ question (like "Moving Tips"), open that question.
+function openLinkedQuestion() {
+  const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+  if (target && target.tagName === "DETAILS") {
+    target.open = true;
+  }
+}
+openLinkedQuestion();
+window.addEventListener("hashchange", openLinkedQuestion);
+
+// 5. Keep the copyright year up to date.
 document.getElementById("year").textContent = new Date().getFullYear();
