@@ -74,8 +74,8 @@ if (document.querySelector('.breadcrumb a[href="index.html#services"]')) {
   });
 }
 
-// 3. Quote form: check the required fields, then send it by email.
-//    It goes through FormSubmit to shaw.elem@gmail.com.
+// 3. Quote form (DEMO): check the required fields, then show the thank-you message.
+//    Nothing is sent anywhere - this is a practice website.
 //    (Only the home page has the form, so skip this on other pages.)
 const form = document.getElementById("quote-form");
 
@@ -101,7 +101,7 @@ if (form) {
     });
   });
 
-  form.addEventListener("submit", async function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     // Check the required fields first.
@@ -125,33 +125,19 @@ if (form) {
       return;
     }
 
-    // Send it. While it's sending, the button is greyed out so it can't be double-clicked.
+    // Pretend to send it for a moment, then show the thank-you message.
+    // Nothing leaves the page: there's no fetch() or real address here.
     errorBox.textContent = "";
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/shaw.elem@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        // Turn the form's boxes into { name: "...", phone: "...", ... } the way FormSubmit expects
-        body: JSON.stringify(Object.fromEntries(new FormData(form)))
-      });
-      const result = await response.json();
-
-      if (!response.ok || String(result.success) !== "true") {
-        throw new Error(result.message || "Send failed");
-      }
-
+    setTimeout(function () {
       form.reset();
       successBox.hidden = false;
       successBox.focus();
-    } catch (error) {
-      errorBox.textContent = "Sorry, your request couldn't be sent. Please call us at 410-324-9898 or email shaw.elem@gmail.com.";
-    } finally {
       submitButton.disabled = false;
       submitButton.textContent = "Send My Quote Request";
-    }
+    }, 700);
   });
 }
 

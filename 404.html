@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Security rules: this page may only load files from this website, and may only send the quote form to FormSubmit -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <!-- Security rules: this page may only load files from this website, and may not send anything anywhere -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <!-- This page was made from the home page's header and footer. If you change those, change them here too. -->
   <title>Page Not Found | Evergreen Moving Co.</title>
-  <meta name="description" content="This page could not be found. Visit the Evergreen Moving Co. home page or call 410-324-9898.">
+  <meta name="description" content="This page could not be found. Visit the Evergreen Moving Co. home page or call (555) 555-0100.">
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#1d6b40">
   <link rel="icon" href="/Evergreen_moving-Co/favicon.svg" type="image/svg+xml">
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Evergreen Moving Co.">
   <meta property="og:title" content="Page Not Found | Evergreen Moving Co.">
-  <meta property="og:description" content="This page could not be found. Visit the Evergreen Moving Co. home page or call 410-324-9898.">
+  <meta property="og:description" content="This page could not be found. Visit the Evergreen Moving Co. home page or call (555) 555-0100.">
   <meta property="og:image" content="https://leonpokov21greatman.github.io/Evergreen_moving-Co/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -28,11 +28,14 @@
 
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Demo notice: this is a practice website, not a real business -->
+  <div class="demo-banner" role="note">Demo website &mdash; Evergreen Moving Co. isn&rsquo;t a real company. Contact details and the form are examples.</div>
+
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="header-phone" href="tel:+14103249898">
+      <a class="header-phone" href="tel:+15555550100">
         <svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>410-324-9898</span>
+        <span>(555) 555-0100</span>
       </a>
 
       <!-- Logo -->
@@ -64,7 +67,7 @@
         <li><a href="/Evergreen_moving-Co/#faq">FAQ</a></li>
         <li><a href="/Evergreen_moving-Co/#quote">Contact</a></li>
         <!-- Only shows in the phone menu, since the header hides the number on small screens -->
-        <li class="nav-call"><a href="tel:+14103249898">Call 410-324-9898</a></li>
+        <li class="nav-call"><a href="tel:+15555550100">Call (555) 555-0100</a></li>
       </ul>
     </nav>
   </header>
@@ -78,7 +81,7 @@
         <p class="hero-sub">Sorry, we couldn't find that page. It may have moved - just like our customers.</p>
         <div class="hero-buttons">
           <a class="btn btn-red" href="/Evergreen_moving-Co/">Go to the Home Page</a>
-          <a class="btn btn-outline" href="tel:+14103249898"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call 410-324-9898</a>
+          <a class="btn btn-outline" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (555) 555-0100</a>
         </div>
         <ul class="related-list">
           <li><a href="/Evergreen_moving-Co/local-moving.html"><svg class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Local Moving</a></li>
@@ -126,14 +129,14 @@
       <div>
         <h2>Contact</h2>
         <ul>
-          <li><a href="tel:+14103249898">410-324-9898</a></li>
-          <li><a href="mailto:shaw.elem@gmail.com">shaw.elem@gmail.com</a></li>
+          <li><a href="tel:+15555550100">(555) 555-0100</a></li>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
           <li>Mon &ndash; Sat: 9 am &ndash; 5 pm</li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="year">2026</span> Evergreen Moving Co. &middot; Baltimore, MD. All rights reserved. &middot; <a href="/Evergreen_moving-Co/privacy.html">Privacy Policy</a></p>
+      <p>&copy; <span id="year">2026</span> Evergreen Moving Co. &middot; Baltimore, MD. All rights reserved. &middot; Demo project, not a real business. &middot; <a href="/Evergreen_moving-Co/privacy.html">Privacy Policy</a></p>
     </div>
   </footer>
 

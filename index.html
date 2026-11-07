@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Security rules: this page may only load files from this website, and may only send the quote form to FormSubmit -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <!-- Security rules: this page may only load files from this website, and may not send anything anywhere -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
 
   <!-- SEO basics -->
   <title>Movers in Baltimore, MD | Evergreen Moving Co.</title>
-  <meta name="description" content="Evergreen Moving Co. is a Baltimore moving company for local and long-distance moves, packing, storage, and office moves. Call 410-324-9898 for a free quote.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Evergreen Moving Co. is a Baltimore moving company for local and long-distance moves, packing, storage, and office moves. Call (555) 555-0100 for a free quote.">
+  <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://leonpokov21greatman.github.io/Evergreen_moving-Co/">
   <meta name="theme-color" content="#1d6b40">
 
@@ -26,7 +26,7 @@
   <meta property="og:image" content="https://leonpokov21greatman.github.io/Evergreen_moving-Co/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Evergreen Moving Co. - Baltimore movers. Call 410-324-9898.">
+  <meta property="og:image:alt" content="Evergreen Moving Co. - Baltimore movers. Call (555) 555-0100.">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -50,8 +50,8 @@
         "logo": "https://leonpokov21greatman.github.io/Evergreen_moving-Co/logo.png",
         "image": "https://leonpokov21greatman.github.io/Evergreen_moving-Co/og-image.jpg",
         "description": "Locally owned Baltimore moving company offering local moving, long-distance moving, packing, storage, office moving, and specialty item moving.",
-        "telephone": "+1-410-324-9898",
-        "email": "shaw.elem@gmail.com",
+        "telephone": "+1-555-555-0100",
+        "email": "hello@example.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Baltimore",
@@ -100,7 +100,7 @@
         "@type": "FAQPage",
         "mainEntity": [
           {"@type": "Question", "name": "How much does it cost to hire movers in Baltimore?",
-           "acceptedAnswer": {"@type": "Answer", "text": "Local moves are priced by the hour. The price depends on how many movers you need, the size of your home, stairs, heavy items, and the distance between homes. Call 410-324-9898 or request a free quote for your exact price."}},
+           "acceptedAnswer": {"@type": "Answer", "text": "Local moves are priced by the hour. The price depends on how many movers you need, the size of your home, stairs, heavy items, and the distance between homes. Call (555) 555-0100 or request a free quote for your exact price."}},
           {"@type": "Question", "name": "How far ahead should I book my move?",
            "acceptedAnswer": {"@type": "Answer", "text": "Two to four weeks ahead is best, especially at the start or end of the month and during summer. We can sometimes fit in last-minute moves, so call to check."}},
           {"@type": "Question", "name": "Do you supply boxes and packing materials?",
@@ -120,12 +120,15 @@
   <!-- Lets keyboard users jump past the menu -->
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Demo notice: this is a practice website, not a real business -->
+  <div class="demo-banner" role="note">Demo website &mdash; Evergreen Moving Co. isn&rsquo;t a real company. Contact details and the form are examples.</div>
+
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="header-phone" href="tel:+14103249898">
+      <a class="header-phone" href="tel:+15555550100">
         <svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>410-324-9898</span>
+        <span>(555) 555-0100</span>
       </a>
 
       <!-- Logo -->
@@ -157,7 +160,7 @@
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#quote">Contact</a></li>
         <!-- Only shows in the phone menu, since the header hides the number on small screens -->
-        <li class="nav-call"><a href="tel:+14103249898">Call 410-324-9898</a></li>
+        <li class="nav-call"><a href="tel:+15555550100">Call (555) 555-0100</a></li>
       </ul>
     </nav>
   </header>
@@ -173,7 +176,7 @@
           <p class="hero-sub">Local moves, long-distance moves, full packing, and storage &mdash; handled by a Baltimore crew that treats your things like their own.</p>
           <div class="hero-buttons">
             <a class="btn btn-red" href="#quote">Get a Free Quote <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
-            <a class="btn btn-outline" href="tel:+14103249898"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call 410-324-9898</a>
+            <a class="btn btn-outline" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (555) 555-0100</a>
             <a class="btn btn-outline" href="#moving-tips"><svg class="lucide lucide-lightbulb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> Moving Tips</a>
           </div>
         </div>
@@ -349,7 +352,7 @@
           <p class="section-tag">Service Area</p>
           <h2 id="areas-title">Areas We <span class="highlight">Serve</span></h2>
           <p>We're based in Baltimore and move people all over Central Maryland. Long-distance moves to other states are available too. Don't see your town? Give us a call.</p>
-          <a class="btn btn-red" href="tel:+14103249898"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call 410-324-9898</a>
+          <a class="btn btn-red" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (555) 555-0100</a>
         </div>
         <ul class="area-list">
           <li><svg class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Baltimore</li>
@@ -376,7 +379,7 @@
           </div>
           <div class="cta-buttons">
             <a class="btn btn-red" href="#quote">Get a Free Quote <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
-            <a class="btn btn-outline-light" href="tel:+14103249898"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Us</a>
+            <a class="btn btn-outline-light" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Us</a>
           </div>
           <svg class="lucide lucide-truck cta-bg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
         </div>
@@ -396,7 +399,7 @@
           <details open>
             <summary>How much does it cost to hire movers in Baltimore?</summary>
             <div class="faq-body">
-              <p>Local moves are priced by the hour. The price depends on how many movers you need, the size of your home, stairs, heavy items, and the distance between homes. Call <a href="tel:+14103249898">410-324-9898</a> or <a href="#quote">request a free quote</a> for your exact price.</p>
+              <p>Local moves are priced by the hour. The price depends on how many movers you need, the size of your home, stairs, heavy items, and the distance between homes. Call <a href="tel:+15555550100">(555) 555-0100</a> or <a href="#quote">request a free quote</a> for your exact price.</p>
               <!--
                 When your rates are set, you can add a price table here, like:
                 <table>
@@ -432,38 +435,28 @@
         <div>
           <p class="section-tag">Free Quote</p>
           <h2 id="quote-title">Tell Us About Your <span class="highlight">Move</span></h2>
-          <p>Fill out the form and we'll get back to you within one business day. Prefer to talk? Just call.</p>
+          <p>Try out the quote form below. It's a demo, so nothing is sent and no one will contact you.</p>
           <ul class="contact-list">
-            <li><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+14103249898">410-324-9898</a></li>
-            <li><svg class="lucide lucide-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> <a href="mailto:shaw.elem@gmail.com">shaw.elem@gmail.com</a></li>
+            <li><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+15555550100">(555) 555-0100</a></li>
+            <li><svg class="lucide lucide-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> <a href="mailto:hello@example.com">hello@example.com</a></li>
             <li><svg class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon &ndash; Sat: 9:00 am &ndash; 5:00 pm</li>
             <li><svg class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Baltimore, MD &amp; surrounding areas</li>
           </ul>
         </div>
 
         <!--
-          The form sends to shaw.elem@gmail.com through FormSubmit (free, no account).
-          The very first time it's used, FormSubmit emails that address an
-          activation link - click it once, and every request after that arrives by email.
-          The "action" below also makes the form work if JavaScript is off.
+          DEMO FORM: this is a practice website, so the form doesn't send anything.
+          method="dialog" means that even with JavaScript turned off, pressing Send
+          goes nowhere and no details leave the page.
         -->
-        <form class="quote-form" id="quote-form" action="https://formsubmit.co/shaw.elem@gmail.com" method="POST" novalidate>
-          <!-- Settings for FormSubmit -->
-          <input type="hidden" name="_subject" value="New quote request - Evergreen Moving Co. website">
-          <input type="hidden" name="_template" value="table">
-          <!-- Spam trap: people never see or fill this box, bots usually do -->
-          <div class="hp" aria-hidden="true">
-            <label for="_honey">Leave this empty</label>
-            <input id="_honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
-          </div>
-
+        <form class="quote-form" id="quote-form" method="dialog" novalidate>
           <div class="field">
             <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
             <input id="name" name="name" type="text" autocomplete="name" required>
           </div>
           <div class="field">
             <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9\s\(\)\+\.\-]{7,}" title="Phone number, for example 410-324-9898" required>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9\s\(\)\+\.\-]{7,}" title="Phone number, for example (555) 555-0100" required>
           </div>
           <div class="field">
             <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
@@ -495,10 +488,10 @@
             <label for="details">Anything we should know?</label>
             <textarea id="details" name="details" rows="4" placeholder="Number of rooms, stairs, heavy items..."></textarea>
           </div>
-          <p class="form-note full"><span class="req" aria-hidden="true">*</span> Required</p>
+          <p class="form-note full"><span class="req" aria-hidden="true">*</span> Required &middot; Demo form: nothing you type is sent anywhere.</p>
           <p class="form-error" id="form-error" role="alert"></p>
           <button class="btn btn-red full" type="submit" id="form-submit">Send My Quote Request</button>
-          <p class="form-success" id="form-success" role="status" tabindex="-1" hidden>Thanks! We got your request and will be in touch within one business day.</p>
+          <p class="form-success" id="form-success" role="status" tabindex="-1" hidden>Thanks! This is a demo website, so your request wasn't sent anywhere.</p>
         </form>
       </div>
     </section>
@@ -541,14 +534,14 @@
       <div>
         <h2>Contact</h2>
         <ul>
-          <li><a href="tel:+14103249898">410-324-9898</a></li>
-          <li><a href="mailto:shaw.elem@gmail.com">shaw.elem@gmail.com</a></li>
+          <li><a href="tel:+15555550100">(555) 555-0100</a></li>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
           <li>Mon &ndash; Sat: 9 am &ndash; 5 pm</li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="year">2026</span> Evergreen Moving Co. &middot; Baltimore, MD. All rights reserved. &middot; <a href="privacy.html">Privacy Policy</a></p>
+      <p>&copy; <span id="year">2026</span> Evergreen Moving Co. &middot; Baltimore, MD. All rights reserved. &middot; Demo project, not a real business. &middot; <a href="privacy.html">Privacy Policy</a></p>
     </div>
   </footer>
 

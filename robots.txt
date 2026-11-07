@@ -1,5 +1,4 @@
-# Lets every search engine read the whole site.
+# This is a demo website. Its pages carry a "noindex" tag so search engines
+# don't list a company that isn't real. Crawling stays allowed so they can see that tag.
 User-agent: *
 Allow: /
-
-Sitemap: https://leonpokov21greatman.github.io/Evergreen_moving-Co/sitemap.xml
