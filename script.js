@@ -151,5 +151,14 @@ function openLinkedQuestion() {
 openLinkedQuestion();
 window.addEventListener("hashchange", openLinkedQuestion);
 
+// Clicking the same link twice doesn't change the address, so also open it on every click.
+document.addEventListener("click", function (event) {
+  const link = event.target.closest('a[href^="#"]');
+  const target = link ? document.getElementById(link.getAttribute("href").slice(1)) : null;
+  if (target && target.tagName === "DETAILS") {
+    target.open = true;
+  }
+});
+
 // 5. Keep the copyright year up to date.
 document.getElementById("year").textContent = new Date().getFullYear();

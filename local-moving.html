@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Security rules: this page may only load files from this website, and may not send anything anywhere -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-BSGkHyz+tu2jsZExdH/Q3YdLOTiIGe7ahAuGDnYokuM='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
   <!-- This page was made from the home page's header and footer. If you change those, change them here too. -->
   <title>Local Movers in Baltimore, MD | Evergreen Moving Co.</title>
   <meta name="description" content="Local moving in Baltimore and nearby towns. Careful crews, furniture wrapping, and clear hourly pricing. Call (555) 555-0100 for a free quote.">
@@ -25,6 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <!-- If you edit the business info (application/ld+json) below, its fingerprint in the security rules above goes out of date. Nothing breaks, but validators will warn again. -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
