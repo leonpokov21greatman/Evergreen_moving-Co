@@ -389,15 +389,14 @@ img.hero-photo, img.about-photo { width: 100%; height: auto; object-fit: cover; 
 
 /* "More about..." links at the bottom of service cards */
 .card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  display: block; /* the arrow stays right after the last word, even when the text wraps */
   margin-top: 14px;
   font-weight: 600;
   color: var(--red);
   text-decoration: none;
 }
 .card-link:hover { text-decoration: underline; }
+.card-link svg { vertical-align: -3px; margin-left: 2px; }
 .service { display: flex; flex-direction: column; }
 .service p { flex: 1; }
 
@@ -709,6 +708,46 @@ th { background: var(--green-light); color: var(--green-dark); }
 .notfound .hero-buttons { justify-content: center; }
 .notfound .hero-sub { margin-inline: auto; }
 .notfound .related-list { margin-top: 40px; }
+
+/* ============ MOVING CHECKLIST ============ */
+.checklist-progress { margin: 16px 0 0; font-weight: 700; color: var(--green); }
+.checklist-group { margin-bottom: 36px; }
+.checklist-group h2 { font-size: 1.4rem; border-bottom: 3px solid var(--red); display: inline-block; padding-bottom: 4px; }
+.checklist { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+.checklist label {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
+  cursor: pointer;
+}
+.checklist label:hover { border-color: var(--green); }
+.checklist input {
+  width: 24px;
+  height: 24px;
+  margin: 1px 0 0;
+  flex-shrink: 0;
+  accent-color: var(--green);
+  cursor: pointer;
+}
+.checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
+
+/* Sample price table caption */
+.price-table caption { text-align: left; font-weight: 700; color: var(--green-dark); padding-bottom: 6px; }
+.price-table caption span { font-weight: 500; color: var(--red); }
+
+/* When printing: just the content, no banner colors, menus or buttons */
+@media print {
+  .site-header, .site-footer, .cta-banner, .hero-buttons, .skip-link, .related { display: none !important; }
+  .demo-banner { background: none; color: #000; border-bottom: 1px solid #000; }
+  .page-hero { background: none; padding: 0 0 12px; }
+  .section { padding: 12px 0; }
+  .checklist label { border: 0; padding: 4px 0; }
+  body { color: #000; }
+}
 
 /* ============ TABLET ============ */
 @media (max-width: 960px) {

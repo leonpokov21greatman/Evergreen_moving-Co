@@ -67,6 +67,9 @@ const watcher = new IntersectionObserver(function (entries) {
 if (document.querySelector('.breadcrumb a[href="index.html#services"]')) {
   // On the service pages, keep "Services" underlined in the menu.
   setActive("index.html#services");
+} else if (document.querySelector("[data-check]")) {
+  // On the checklist page, underline "Moving Checklist".
+  setActive("moving-checklist.html");
 } else {
   // On the home page, follow the section you're looking at.
   document.querySelectorAll("main > section").forEach(function (section) {
@@ -160,5 +163,44 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// 5. Keep the copyright year up to date.
+// 5. Moving checklist page: print button, ticks saved in this browser, and a progress count.
+const checks = document.querySelectorAll("[data-check]");
+if (checks.length) {
+  const progress = document.getElementById("checklist-progress");
+  const KEY = "evergreen-checklist";
+
+  // Saved ticks live in this browser only. If storage is blocked (private mode), it still works, just without saving.
+  function loadTicks() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+  }
+  function saveTicks(ticks) {
+    try { localStorage.setItem(KEY, JSON.stringify(ticks)); } catch (e) { /* not saved, that's fine */ }
+  }
+  function updateProgress() {
+    const done = document.querySelectorAll("[data-check]:checked").length;
+    progress.textContent = done + " of " + checks.length + " done";
+  }
+
+  const ticks = loadTicks();
+  checks.forEach(function (box) {
+    box.checked = !!ticks[box.dataset.check];
+    box.addEventListener("change", function () {
+      ticks[box.dataset.check] = box.checked;
+      saveTicks(ticks);
+      updateProgress();
+    });
+  });
+  updateProgress();
+
+  document.querySelector("[data-print]").addEventListener("click", function () {
+    window.print();
+  });
+  document.querySelector("[data-clear-checks]").addEventListener("click", function () {
+    checks.forEach(function (box) { box.checked = false; ticks[box.dataset.check] = false; });
+    saveTicks(ticks);
+    updateProgress();
+  });
+}
+
+// 6. Keep the copyright year up to date.
 document.getElementById("year").textContent = new Date().getFullYear();
