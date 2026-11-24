@@ -3,14 +3,22 @@
    All the main colors live here. Change them once and the whole site updates.
    ============================================ */
 
-/* Outfit font, stored on our own site (fonts folder) instead of loading from Google.
-   Outfit is free to use under the SIL Open Font License. */
+/* Fonts, stored on our own site (fonts folder). Both are free under the SIL Open Font License.
+   Big Shoulders Stencil: headings, like the print on a moving box.
+   Public Sans: body text, plain and easy to read. */
 @font-face {
-  font-family: "Outfit";
+  font-family: "Big Shoulders Stencil";
   font-style: normal;
-  font-weight: 400 800;
+  font-weight: 500 900;
   font-display: swap;
-  src: url("fonts/outfit-latin.woff2") format("woff2");
+  src: url("fonts/bigshoulders-stencil.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/public-sans.woff2") format("woff2");
 }
 :root {
   --green: #1d6b40;        /* main brand green */
@@ -18,12 +26,16 @@
   --green-light: #eaf5ee;  /* soft section backgrounds */
   --red: #c8102e;          /* buttons and highlights */
   --red-dark: #9e0c24;     /* button hover */
-  --text: #1f2a24;
-  --muted: #55625a;
+  --text: #16241b;        /* body ink: dark forest, not grey-black */
+  --muted: #3e4a42;       /* secondary text, 8:1 or better on white and pale green */
+  --kraft: #c49a6c;       /* cardboard: only for box details */
+  --kraft-light: #e6d3b5;
+  --kraft-ink: #3b2a17;
+  --display: "Big Shoulders Stencil", "Arial Narrow", sans-serif;
   --white: #ffffff;
   --border: #d9e6dd;
-  --radius: 14px;
-  --shadow: 0 8px 24px rgba(15, 59, 36, 0.08);
+  --radius: 10px;
+  --shadow: none; /* flat: hierarchy comes from borders and colour, not one shadow under everything */
 }
 
 * { box-sizing: border-box; }
@@ -36,7 +48,8 @@ section[id], details[id] { scroll-margin-top: 130px; }
 
 body {
   margin: 0;
-  font-family: "Outfit", system-ui, sans-serif;
+  font-family: "Public Sans", system-ui, sans-serif;
+  font-size: 1.0625rem;
   color: var(--text);
   background: var(--white);
   line-height: 1.6;
@@ -48,12 +61,14 @@ a { color: var(--green); }
 
 h1, h2, h3 {
   color: var(--green-dark);
-  line-height: 1.15;
+  line-height: 1.02;
+  font-family: var(--display);
+  letter-spacing: 0.005em;
   margin: 0 0 0.5em;
 }
-h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; }
-h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 700; }
-h3 { font-size: 1.2rem; font-weight: 600; }
+h1 { font-size: clamp(2.75rem, 6.4vw, 5.25rem); font-weight: 800; }
+h2 { font-size: clamp(2.1rem, 4vw, 3.1rem); font-weight: 800; }
+h3 { font-size: 1.45rem; font-weight: 700; }
 
 .container { width: min(1180px, 100% - 32px); margin-inline: auto; }
 .container.narrow { width: min(860px, 100% - 32px); }
@@ -62,13 +77,7 @@ h3 { font-size: 1.2rem; font-weight: 600; }
 svg.lucide { width: 1.15em; height: 1.15em; flex-shrink: 0; }
 
 /* The red word with a green underline in headings */
-.highlight {
-  color: var(--red);
-  text-decoration: underline;
-  text-decoration-color: var(--green);
-  text-decoration-thickness: 4px;
-  text-underline-offset: 6px;
-}
+.highlight { color: inherit; } /* kept as a hook; no longer styled */
 
 .skip-link {
   position: absolute;
@@ -100,7 +109,7 @@ textarea:focus-visible {
   justify-content: center;
   gap: 8px;
   padding: 13px 24px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 2px solid transparent;
   font: inherit;
   font-weight: 600;
@@ -239,8 +248,8 @@ textarea:focus-visible {
 
 /* ============ HERO ============ */
 .hero {
-  background: linear-gradient(180deg, var(--green-light), var(--white));
-  padding: 64px 0 40px;
+  background: var(--white);
+  padding: 72px 0 88px;
 }
 .hero-inner {
   display: grid;
@@ -337,8 +346,7 @@ img.hero-photo, img.about-photo { width: 100%; height: auto; object-fit: cover; 
 .section-tag {
   color: var(--red);
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+  
   font-size: 0.85rem;
   margin: 0 0 8px;
 }
@@ -357,9 +365,7 @@ img.hero-photo, img.about-photo { width: 100%; height: auto; object-fit: cover; 
 /* ============ CARDS ============ */
 /* "Why trust us" is a dark green band, so the page isn't all white cards */
 .trust {
-  background:
-    radial-gradient(circle at 90% 10%, rgba(200, 16, 46, 0.25), transparent 40%),
-    var(--green-dark);
+  background: var(--green-dark);
   color: #d6eadd;
 }
 .trust h2, .trust h3 { color: var(--white); }
@@ -500,7 +506,7 @@ img.hero-photo, img.about-photo { width: 100%; height: auto; object-fit: cover; 
   align-items: center;
   padding: 56px;
   border-radius: 28px;
-  background: linear-gradient(120deg, var(--green-dark), var(--green));
+  background: var(--green-dark);
   color: var(--white);
 }
 .cta-banner h2 { color: var(--white); }
@@ -611,7 +617,7 @@ th { background: var(--green-light); color: var(--green-dark); }
 .site-footer { background: var(--green-dark); color: #cfe3d6; padding: 64px 0 0; }
 .site-footer a { color: #cfe3d6; text-decoration: none; }
 .site-footer a:hover { color: var(--white); text-decoration: underline; }
-.site-footer h2 { color: var(--white); font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.site-footer h2 { color: var(--white); font-size: 1.35rem; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 /* Taller links in the footer so they're easy to tap on a phone */
 .site-footer li a { display: inline-block; padding: 5px 0; }
@@ -632,7 +638,7 @@ th { background: var(--green-light); color: var(--green-dark); }
 
 /* ============ INNER PAGES (services, privacy, 404) ============ */
 .page-hero {
-  background: linear-gradient(180deg, var(--green-light), var(--white));
+  background: var(--green-light);
   padding: 32px 0 56px;
 }
 .breadcrumb ol {
@@ -759,11 +765,113 @@ th { background: var(--green-light); color: var(--green-dark); }
   body { color: #000; }
 }
 
+/* ============ MOVING-BOX DETAILS (redesign 2026-11-19) ============ */
+/* Text only screen readers hear */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* Readable line length */
+p { max-width: 65ch; }
+.hero h1 { text-transform: uppercase; line-height: 0.95; letter-spacing: 0.01em; max-width: 11ch; }
+.hero-sub { font-size: 1.2rem; }
+.hero-alt { margin: 18px 0 0; font-weight: 600; }
+.hero-alt a { color: var(--green); text-underline-offset: 3px; }
+.hero-alt a:hover { color: var(--red); }
+
+/* The shipping label in the hero: cardboard, a strip of tape, field names and values */
+.box-label {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 440px);
+  background: var(--kraft-light);
+  color: var(--kraft-ink);
+  border: 2px solid var(--kraft-ink);
+  border-radius: 4px;
+  padding: 34px 28px 22px;
+  transform: rotate(-1.5deg);
+}
+.box-label .tape {
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  width: 132px;
+  height: 30px;
+  transform: translateX(-50%) rotate(2deg);
+  background: rgba(240, 226, 196, 0.85);
+  border-left: 2px dashed rgba(59, 42, 23, 0.25);
+  border-right: 2px dashed rgba(59, 42, 23, 0.25);
+}
+.label-from {
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--kraft-ink);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--green-dark);
+}
+.label-from span { display: block; margin-top: 6px; font-family: "Public Sans", sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--kraft-ink); }
+.label-fields { margin: 0; display: grid; gap: 12px; }
+.label-fields div { display: grid; grid-template-columns: 82px 1fr; gap: 12px; align-items: baseline; }
+.label-fields dt { font-size: 0.85rem; font-weight: 600; color: #5c4528; }
+.label-fields dd { margin: 0; font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.1; color: var(--kraft-ink); }
+.label-symbols {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 14px 0 0;
+  border-top: 2px dashed rgba(59, 42, 23, 0.45);
+  display: flex;
+  gap: 22px;
+  color: var(--red);
+}
+.label-symbols li { display: flex; align-items: center; }
+.label-symbols svg { width: 30px; height: 30px; stroke-width: 2.2; }
+.label-symbols .pair svg + svg { margin-left: -10px; }
+
+/* The side of a box in the About section */
+.box-side {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  background: var(--kraft);
+  border-radius: 4px;
+  color: var(--kraft-ink);
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+  overflow: hidden;
+}
+.box-side::before, .box-side::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 44px;
+  background: rgba(240, 226, 196, 0.6);
+}
+.box-side::before { top: 0; }
+.box-side::after { bottom: 0; }
+.box-side .stamp { font-family: var(--display); font-weight: 900; font-size: clamp(2.6rem, 5vw, 3.6rem); line-height: 0.9; text-align: center; text-transform: uppercase; color: var(--green-dark); }
+.box-side .marks { display: flex; gap: 26px; color: var(--red); }
+.box-side .marks svg { width: 46px; height: 46px; stroke-width: 2.2; }
+.box-side .marks .pair svg + svg { margin-left: -16px; }
+.box-side .room { font-family: var(--display); font-weight: 700; font-size: 1.5rem; border: 3px solid var(--kraft-ink); padding: 2px 14px; transform: rotate(-3deg); }
+
+/* Cards: flat, outlined; the hover still answers with a colour change */
+.card { box-shadow: none; }
+.card:hover { transform: none; }
+.service .card-icon, .card-icon { border-radius: 6px; }
+.promo-img { box-shadow: none; }
+.footer-bottom p { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; max-width: none; }
+
 /* ============ TABLET ============ */
 @media (max-width: 960px) {
   .card-grid.four { grid-template-columns: repeat(2, 1fr); }
   .card-grid.three { grid-template-columns: repeat(2, 1fr); }
   .hero-inner, .about-inner, .quote-inner, .areas-inner { grid-template-columns: 1fr; gap: 36px; }
+  .box-label { justify-self: start; transform: rotate(-1deg); }
+  /* phones: keep the stamp clear of the tape strips */
+  .box-side { aspect-ratio: auto; padding: 72px 20px; }
+  .box-side::before, .box-side::after { height: 36px; }
   .steps { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; gap: 26px; }
   .two-col { grid-template-columns: 1fr; gap: 28px; }

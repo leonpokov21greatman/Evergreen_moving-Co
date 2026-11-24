@@ -139,7 +139,7 @@ if (form) {
       successBox.hidden = false;
       successBox.focus();
       submitButton.disabled = false;
-      submitButton.textContent = "Send My Quote Request";
+      submitButton.textContent = "Send my quote request";
     }, 700);
   });
 }

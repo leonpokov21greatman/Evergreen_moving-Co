@@ -31,7 +31,8 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Start downloading the font right away (it's stored in the fonts folder) -->
-  <link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bigshoulders-stencil.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 
   <!--
@@ -140,9 +141,7 @@
       </a>
 
       <div class="header-actions">
-        <a class="btn btn-red btn-small header-quote" href="#quote">
-          Get a Free Quote <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-        </a>
+        <a class="btn btn-red btn-small header-quote" href="#quote">Get a free quote</a>
         <!-- Menu button (only shows on small screens) -->
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
           <svg class="lucide lucide-menu icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
@@ -174,53 +173,48 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="eyebrow"><svg class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Based in Baltimore, MD</p>
-          <h1 id="hero-title">Baltimore's Friendly, <span class="highlight">Careful</span> Movers</h1>
-          <p class="hero-sub">Local moves, long-distance moves, full packing, and storage &mdash; handled by a Baltimore crew that treats your things like their own.</p>
+          <h1 id="hero-title">Baltimore&rsquo;s friendly, careful movers</h1>
+          <p class="hero-sub">Local and long-distance moves, packing, and storage, handled by a Baltimore crew that treats your things like their own.</p>
           <div class="hero-buttons">
-            <a class="btn btn-red" href="#quote">Get a Free Quote <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+            <a class="btn btn-red" href="#quote">Get a free quote</a>
             <a class="btn btn-outline" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (555) 555-0100</a>
-            <a class="btn btn-outline" href="moving-checklist.html"><svg class="lucide lucide-lightbulb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> Moving Tips</a>
           </div>
+          <p class="hero-alt"><a href="moving-checklist.html">Planning ahead? Use the moving-day checklist</a></p>
         </div>
 
-        <!--
-          Picture area. To use a real photo, replace this whole <div> with:
-          <img class="hero-photo" src="truck.jpg" width="1200" height="900"
-               alt="Evergreen moving truck parked outside a Baltimore rowhouse">
-        -->
-        <div class="hero-photo art" aria-hidden="true">
-          <span class="art-badge"><svg class="lucide lucide-truck" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
-          <span class="art-chip chip-1"><svg class="lucide lucide-box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packed</span>
-          <span class="art-chip chip-2"><svg class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Wrapped &amp; padded</span>
-          <span class="art-chip chip-3"><svg class="lucide lucide-calendar-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg> On time</span>
-        </div>
+        <!-- A shipping label with the quick facts. To use a real photo instead, replace this aside with an <img>. -->
+        <aside class="box-label" aria-label="Quick facts">
+          <span class="tape" aria-hidden="true"></span>
+          <p class="label-from">Evergreen Moving Co. <span>Baltimore, MD</span></p>
+          <dl class="label-fields">
+            <div><dt>Quotes</dt><dd>Free, no pressure</dd></div>
+            <div><dt>Hours</dt><dd>Mon&ndash;Sat, 9 am&ndash;5 pm</dd></div>
+            <div><dt>Moves</dt><dd>Local and long-distance</dd></div>
+            <div><dt>Extras</dt><dd>Packing and storage</dd></div>
+          </dl>
+          <ul class="label-symbols" aria-label="Handled with care">
+            <li class="pair"><span class="sr-only">This side up</span><svg class="lucide lucide-arrow-big-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18v-6H5l7-7 7 7h-4v6H9z"/></svg><svg class="lucide lucide-arrow-big-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18v-6H5l7-7 7 7h-4v6H9z"/></svg></li>
+            <li><span class="sr-only">Keep dry</span><svg class="lucide lucide-umbrella" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 12a10.06 10.06 1 0 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></svg></li>
+            <li><span class="sr-only">Fragile</span><svg class="lucide lucide-wine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg></li>
+          </ul>
+        </aside>
       </div>
-
-      <!-- Quick facts under the hero -->
-      <ul class="container stats" aria-label="Quick facts">
-        <li class="stat"><strong>Free</strong><span>No-pressure quotes</span></li>
-        <li class="stat"><strong>6 days</strong><span>Mon &ndash; Sat, 9 am &ndash; 5 pm</span></li>
-        <li class="stat"><strong>Local</strong><span>&amp; long-distance moves</span></li>
-        <li class="stat"><strong>Packing</strong><span>&amp; storage available</span></li>
-      </ul>
     </section>
 
     <!-- ============ ABOUT ============ -->
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container about-inner">
-        <!-- Picture area. Swap for a real team photo the same way as the hero. -->
-        <div class="about-photo art art-alt" aria-hidden="true">
-          <span class="art-badge"><svg class="lucide lucide-users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-          <span class="art-chip chip-1"><svg class="lucide lucide-house" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Homes</span>
-          <span class="art-chip chip-2"><svg class="lucide lucide-building-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg> Offices</span>
+        <!-- The side of a moving box. Swap for a real team photo with an <img class="about-photo"> when you have one. -->
+        <div class="box-side" aria-hidden="true">
+          <span class="stamp">Handle<br>with care</span>
+          <span class="marks"><span class="pair"><svg class="lucide lucide-arrow-big-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18v-6H5l7-7 7 7h-4v6H9z"/></svg><svg class="lucide lucide-arrow-big-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18v-6H5l7-7 7 7h-4v6H9z"/></svg></span><svg class="lucide lucide-umbrella" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 12a10.06 10.06 1 0 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></svg><svg class="lucide lucide-wine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg></span>
+          <span class="room">Kitchen</span>
         </div>
         <div>
-          <p class="section-tag">About Us</p>
-          <h2 id="about-title">Meet Your Baltimore <span class="highlight">Moving</span> Crew</h2>
+          <h2 id="about-title">Meet your Baltimore moving crew</h2>
           <p>Evergreen Moving Co. is a Baltimore moving company serving families, students, and businesses in Baltimore and across Central Maryland. We work on a simple promise: show up on time, be careful with every item, and charge a fair price.</p>
           <p>Our crews handle everything from studio apartments and Baltimore rowhouses to full office moves &mdash; and we know how to deal with narrow stairs, tight streets, and city parking.</p>
-          <a class="btn btn-outline-green" href="#services">See Our Services <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          <a class="btn btn-outline-green" href="#services">See our services</a>
         </div>
       </div>
     </section>
@@ -229,7 +223,7 @@
     <section class="section trust" aria-labelledby="trust-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="trust-title">Why Choose <span class="highlight">Evergreen</span></h2>
+          <h2 id="trust-title">Why choose Evergreen</h2>
           <p>Here&rsquo;s what you can expect when Evergreen handles your move.</p>
         </div>
         <div class="features">
@@ -269,8 +263,7 @@
     <section class="section" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-head">
-          <p class="section-tag">What We Do</p>
-          <h2 id="services-title">Baltimore <span class="highlight">Moving</span> Services</h2>
+          <h2 id="services-title">Baltimore moving services</h2>
           <p>Whatever kind of move you're planning, we have a service that fits.</p>
         </div>
         <div class="card-grid four">
@@ -278,49 +271,49 @@
             <span class="card-icon"><svg class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
             <h3>Local Moving in Baltimore</h3>
             <p>Across town or across the street, our local crews make moves within Baltimore and nearby towns quick and easy.</p>
-            <a class="card-link" href="local-moving.html">More about local moving <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="local-moving.html">More about local moving</a>
           </article>
           <article class="card service" id="long-distance-moving">
             <span class="card-icon"><svg class="lucide lucide-route" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span>
             <h3>Long-Distance Moving</h3>
             <p>Moving out of Maryland? We plan the route and keep you updated the whole way.</p>
-            <a class="card-link" href="long-distance-moving.html">More about long-distance moving <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="long-distance-moving.html">More about long-distance moving</a>
           </article>
           <article class="card service" id="international-moving">
             <span class="card-icon"><svg class="lucide lucide-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
             <h3>International Moving</h3>
             <p>Moving abroad? We pack for the long trip and help you keep the paperwork straight.</p>
-            <a class="card-link" href="international-moving.html">More about international moving <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="international-moving.html">More about international moving</a>
           </article>
           <article class="card service" id="packing">
             <span class="card-icon"><svg class="lucide lucide-box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
             <h3>Packing Services</h3>
             <p>We bring the boxes, tape, and wrap &mdash; and pack everything safely for you.</p>
-            <a class="card-link" href="packing-services.html">More about packing services <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="packing-services.html">More about packing services</a>
           </article>
           <article class="card service" id="storage">
             <span class="card-icon"><svg class="lucide lucide-warehouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect width="12" height="12" x="6" y="10"/></svg></span>
             <h3>Storage</h3>
             <p>Secure storage for a few days or a few months while you settle in.</p>
-            <a class="card-link" href="storage.html">More about storage <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="storage.html">More about storage</a>
           </article>
           <article class="card service" id="office-moving">
             <span class="card-icon"><svg class="lucide lucide-building-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span>
             <h3>Office Moving</h3>
             <p>We move desks, files, and equipment after hours so your business keeps running.</p>
-            <a class="card-link" href="office-moving.html">More about office moving <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="office-moving.html">More about office moving</a>
           </article>
           <article class="card service" id="corporate-relocation">
             <span class="card-icon"><svg class="lucide lucide-briefcase-business" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span>
             <h3>Corporate Relocation</h3>
             <p>Relocating employees? One contact for your company and a smooth move for each person.</p>
-            <a class="card-link" href="corporate-relocation.html">More about corporate relocation <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="corporate-relocation.html">More about corporate relocation</a>
           </article>
           <article class="card service" id="specialty-items">
             <span class="card-icon"><svg class="lucide lucide-piano" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.5 8c-1.4 0-2.6-.8-3.2-2A6.87 6.87 0 0 0 2 9v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8.5C22 9.6 20.4 8 18.5 8"/><path d="M2 14h20"/><path d="M6 14v4"/><path d="M10 14v4"/><path d="M14 14v4"/><path d="M18 14v4"/></svg></span>
             <h3>Specialty Items</h3>
             <p>Pianos, safes, artwork, and antiques get extra padding and extra care.</p>
-            <a class="card-link" href="specialty-items.html">More about specialty item moving <svg class="lucide lucide-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a>
+            <a class="card-link" href="specialty-items.html">More about specialty item moving</a>
           </article>
         </div>
       </div>
@@ -334,7 +327,7 @@
     <section class="section steps-section" id="how-it-works" aria-labelledby="steps-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="steps-title">How Your Move <span class="highlight">Works</span></h2>
+          <h2 id="steps-title">How your move works</h2>
           <p>Three simple steps from your first call to your first night in your new home.</p>
         </div>
         <ol class="steps">
@@ -364,8 +357,7 @@
     <section class="section areas" id="areas" aria-labelledby="areas-title">
       <div class="container areas-inner">
         <div>
-          <p class="section-tag">Service Area</p>
-          <h2 id="areas-title">Areas We <span class="highlight">Serve</span></h2>
+          <h2 id="areas-title">Areas we serve</h2>
           <p>We're based in Baltimore and move people all over Central Maryland. Long-distance moves to other states are available too. Don't see your town? Give us a call.</p>
           <a class="btn btn-red" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (555) 555-0100</a>
         </div>
@@ -401,14 +393,13 @@
       <div class="container">
         <div class="cta-banner">
           <div>
-            <h2 id="cta-title">Planning a Move? Let&rsquo;s Make It Easy</h2>
+            <h2 id="cta-title">Planning a move? Let&rsquo;s make it easy</h2>
             <p>Try the quote form to see how asking for a free, no-pressure quote works on this demo site. It only takes a minute.</p>
           </div>
           <div class="cta-buttons">
-            <a class="btn btn-red" href="#quote">Get a Free Quote <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
-            <a class="btn btn-outline-light" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Us</a>
+            <a class="btn btn-red" href="#quote">Get a free quote</a>
+            <a class="btn btn-outline-light" href="tel:+15555550100"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call us</a>
           </div>
-          <svg class="lucide lucide-truck cta-bg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
         </div>
       </div>
     </section>
@@ -418,7 +409,7 @@
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container narrow">
         <div class="section-head">
-          <h2 id="faq-title">Frequently Asked <span class="highlight">Questions</span></h2>
+          <h2 id="faq-title">Frequently asked questions</h2>
         </div>
 
         <!-- Each <details> opens and closes by itself - no JavaScript needed -->
@@ -462,8 +453,7 @@
     <section class="section quote" id="quote" aria-labelledby="quote-title">
       <div class="container quote-inner">
         <div>
-          <p class="section-tag">Free Quote</p>
-          <h2 id="quote-title">Tell Us About Your <span class="highlight">Move</span></h2>
+          <h2 id="quote-title">Tell us about your move</h2>
           <p>Try out the quote form below. It's a demo, so nothing is sent and no one will contact you.</p>
           <ul class="contact-list">
             <li><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+15555550100">(555) 555-0100</a></li>
@@ -517,9 +507,9 @@
             <label for="details">Anything we should know?</label>
             <textarea id="details" name="details" rows="4" placeholder="Number of rooms, stairs, heavy items..."></textarea>
           </div>
-          <p class="form-note full"><span class="req" aria-hidden="true">*</span> Required &middot; Demo form: nothing you type is sent anywhere.</p>
+          <p class="form-note full"><span class="req" aria-hidden="true">*</span> Required. Demo form: nothing you type is sent anywhere.</p>
           <p class="form-error" id="form-error" role="alert"></p>
-          <button class="btn btn-red full" type="submit" id="form-submit">Send My Quote Request</button>
+          <button class="btn btn-red full" type="submit" id="form-submit">Send my quote request</button>
           <p class="form-success" id="form-success" role="status" tabindex="-1" hidden>Thanks! This is a demo website, so your request wasn't sent anywhere.</p>
         </form>
       </div>
@@ -539,7 +529,7 @@
         <!-- Add your USDOT / MC / Maryland licence numbers here once you have them, e.g. <p>USDOT #1234567</p> -->
       </div>
       <nav aria-label="Footer">
-        <h2>Quick Links</h2>
+        <h2>Quick links</h2>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -573,7 +563,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="year">2026</span> Evergreen Moving Co. &middot; Baltimore, MD. All rights reserved. &middot; Demo project, not a real business. &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a></p>
+      <p><span>&copy; <span id="year">2026</span> Evergreen Moving Co.</span><span>Baltimore, MD. All rights reserved.</span><span>Demo project, not a real business.</span><span><a href="privacy.html">Privacy Policy</a></span><span><a href="terms.html">Terms of Use</a></span></p>
     </div>
   </footer>
 
